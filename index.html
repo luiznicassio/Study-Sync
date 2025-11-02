@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudySync</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh; /* ocupa toda a altura da tela */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+
+      /* imagem de fundo em tela cheia */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url("Logo.webp"); /* substitua pelo nome da sua imagem */
+      background-size: cover; /* cobre toda a tela */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed; /* fundo fixo ao rolar */
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.6); /* leve transparência sobre a imagem */
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #8a2be2; /* roxo vibrante */
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6b1fbf;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Um lugar para organizar e gerenciar seus estudos!!!</h1>
+    <a href="pages/home.html"><button>Entrar</button></a>
+  </div>
+</body>
+</html>

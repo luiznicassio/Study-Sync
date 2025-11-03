@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="imgs/icon.jpeg" type="image/x-icon">
   <title>StudySync</title>
   <style>
     body {
@@ -14,11 +13,10 @@
       align-items: center;
       flex-direction: column;
       font-family: 'Poppins', sans-serif;
-      color: #ffffff;
+      color: #000000;
 
       /* imagem de fundo em tela cheia */
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url("imgs/Logo.webp"); /* substitua pelo nome da sua imagem */
+      background-image: url("/imgs/Logo.webp"); /* substitua pelo nome da sua imagem */
       background-size: cover; /* cobre toda a tela */
       background-repeat: no-repeat;
       background-position: center;
@@ -27,10 +25,8 @@
 
     .container {
       text-align: center;
-      padding: 40px;
-      background: rgba(0, 0, 0, 0.6); /* leve transparência sobre a imagem */
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+      margin-top: 350px;
+    
     }
 
     h1 {
@@ -40,11 +36,12 @@
 
     button {
       background-color: #8a2be2; /* roxo vibrante */
-      color: white;
+      color: rgb(255, 255, 255);
       border: none;
-      padding: 12px 30px;
+      padding: 15px 60px;
       border-radius: 25px;
-      font-size: 1rem;
+      font-size: 1.5rem;
+      line-height: 1;
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -58,7 +55,7 @@
 <body>
   <div class="container">
     <h1>Um lugar para organizar e gerenciar seus estudos!!!</h1>
-    <a href="pages/home.html"><button>Entrar</button></a>
+    <button>Entrar</button>
   </div>
 </body>
 </html>

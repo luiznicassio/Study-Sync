@@ -5,7 +5,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background-color: #2c2c2c;
   font-family: Arial, sans-serif;
@@ -56,12 +57,12 @@ main {
   border-radius: 8px;
   color: white;
   padding: 0;
-  display: flex; /* alterado de grid para flex */
+  display: flex;
   flex-direction: column;
   gap: 20px;
   height: 100%;
-  max-height: 100%; /* garante que não ultrapasse o limite da tela */
-  overflow: hidden; /* evita scroll duplo */
+  max-height: 100%;
+  overflow: hidden;
 }
 
 main h1 {
@@ -73,63 +74,9 @@ main h1 {
 }
 
 /* ======== MODAL FIXO (CREATE) ======== */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 999;
-}
-
-/* ======== CABEÇALHO DO CREATE ======== */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 18px;
-}
-header h1 {
-  font-size: 20px;
-  margin: 0;
-}
-header p {
-  margin: 0;
-  color: #bbb;
-  font-size: 13px;
-}
-
-.controls {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-.btn {
-  background: rgb(82, 9, 150);
-  border: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: opacity 0.2s;
-}
-.btn:hover {
-  opacity: 0.9;
-}
-.btn.ghost {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  color: #bbb;
-  font-weight: 500;
-}
-
-/* ======== FORMULÁRIO ======== */
-
 .create {
   position: fixed;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #1c1c1c;
@@ -143,64 +90,66 @@ header p {
   display: none;
 }
 
-.panel {
- 
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.02);
+/* Fundo escurecido opcional */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
-/* Painel de tarefas ajustado */
-.panel.tarefas {  
+/* ======== CABEÇALHO DO CREATE ======== */
+header {
   display: flex;
   flex-direction: column;
-          /* cresce com o conteúdo */
-  max-height: 100%;      /* limite máximo */
-  overflow-y: auto;      /* rolagem automática */
-  background: rgba(255, 255, 255, 0.02);
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.02);
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 24px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
 }
-label {
-  font-size: 13px;
+
+header p {
+  font-size: 14px;
   color: #bbb;
 }
-input[type="text"],
-input[type="date"] {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  padding: 8px 10px;
-  border-radius: 8px;
-  color: white;
-  outline: none;
-  transition: border 0.2s, background 0.2s;
-}
-input[type="text"]:focus,
-input[type="date"]:focus {
-  border-color: rgb(82, 9, 150);
-  background: rgba(255, 255, 255, 0.1);
-}
 
-.form-row {
+/* ======== CONTROLES ======== */
+.controls {
   display: flex;
-  gap: 8px;
-}
-.form-row input {
-  flex: 1;
-}
-.small {
-  font-size: 12px;
-  color: #aaa;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-/* ======== LISTAGEM DE TAREFAS ======== */
+.btn {
+  background: rgb(82, 9, 150);
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #bbb;
+}
 
 /* ======== FORMULÁRIO ======== */
 .form-container form {
@@ -321,11 +270,11 @@ form > div:last-of-type {
   color: #fff;
 }
 
-
 /* ======== MENU DE AÇÕES ======== */
 .menu {
   position: relative;
 }
+
 .menu-btn {
   background: transparent;
   border: none;
@@ -334,9 +283,11 @@ form > div:last-of-type {
   color: #bbb;
   transition: color 0.2s;
 }
+
 .menu-btn:hover {
   color: #fff;
 }
+
 .menu-list {
   position: absolute;
   right: 0;
@@ -352,10 +303,12 @@ form > div:last-of-type {
   transform: translateY(-4px);
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
+
 .menu-list[style*="display: block"] {
   opacity: 1;
   transform: translateY(0);
 }
+
 .menu-list button {
   display: block;
   width: 100%;
@@ -367,6 +320,7 @@ form > div:last-of-type {
   cursor: pointer;
   font-size: 13px;
 }
+
 .menu-list button:hover {
   background: rgba(255, 255, 255, 0.05);
   color: #fff;

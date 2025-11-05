@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,19 +9,28 @@
   <link rel="shortcut icon" href="../imgs/icon.jpeg" type="image/x-icon">
 
   <!-- Ícones -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
   <!-- CSS base -->
   <link rel="stylesheet" href="../css/reset.css" />
   <link rel="stylesheet" href="../css/style.css" />
 
- 
+  <style>
+    /* 💡 Novo estilo para o contador */
+    .deadline {
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 4px;
+    }
+
+    .deadline.expired {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
-<body> 
+<body>
   <section class="create" role="application">
     <header>
       <div>
@@ -47,7 +57,14 @@
             <input id="fim" type="date" />
           </div>
         </div>
-
+        <div>
+          <label>Prioridade</label>
+          <select id="prioridade" required>
+            <option value="alta">Alta</option>
+            <option value="media">Média</option>
+            <option value="baixa">Baixa</option>
+          </select>
+        </div>
         <div>
           <button type="submit" class="btn">Salvar</button>
           <button id="cancelEdit" type="button" class="btn ghost" style="display: none;">Cancelar</button>
@@ -73,8 +90,9 @@
     <main>
       <!-- Painel de tarefas -->
       <section class="panel tarefas">
-        <h2>Lista de tarefas</h2><br>
-        <div id="lista" class="list"></div>
+        <div id="lista" class="list">
+          
+        </div>
         <div id="empty" class="empty" style="display: none;">
           Nenhuma tarefa ainda. Clique em <strong>+</strong> para criar a primeira.
         </div>
@@ -82,8 +100,9 @@
     </main>
   </div>
 
-  <!-- JS -->
+  <!-- JS principal -->
   <script src="../js/index.js"></script>
   <script src="../js/btn.js"></script>
 </body>
+
 </html>

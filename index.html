@@ -1,72 +1,72 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="imgs/icon.jpeg" type="image/x-icon">
-  <title>StudySync</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-family: 'Poppins', sans-serif;
-      color: #000;
-      background-image: url("/imgs/Logo.webp");
-      background-size: contain; /* imagem diminui proporcional */
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #F4F5F7;
-    }
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/icon.jpeg" type="image/x-icon">
+    <title>StudySync</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+        color: #000;
+        background-image: url("/imgs/Logo.webp");
+        background-size: contain; /* imagem diminui proporcional */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #F4F5F7;
+      }
 
-    .container {
-      text-align: center;
-      transform: translateY(130%); /* ↓↓↓ move o texto para baixo de forma suave */
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-
-    button {
-      background-color: #8a2be2;
-      color: #fff;
-      border: none;
-      padding: 15px 60px;
-      border-radius: 25px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background-color: #6b1fbf;
-      transform: scale(1.05);
-    }
-
-    /* Responsivo */
-    @media (max-width: 600px) {
       .container {
-        transform: translateY(85%); /* Ajusta mais em telas pequenas */
+        text-align: center;
+        transform: translateY(130%); /* ↓↓↓ move o texto para baixo de forma suave */
       }
+
       h1 {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
       }
+
       button {
-        padding: 12px 40px;
-        font-size: 1.1rem;
+        background-color: #8a2be2;
+        color: #fff;
+        border: none;
+        padding: 15px 60px;
+        border-radius: 25px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: 0.3s;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Um lugar para organizar e gerenciar seus estudos!!!</h1>
-    <a href="pages/home.html"><button>Entrar</button></a>
-  </div>
-</body>
-</html>
+
+      button:hover {
+        background-color: #6b1fbf;
+        transform: scale(1.05);
+      }
+
+      /* Responsivo */
+      @media (max-width: 600px) {
+        .container {
+          transform: translateY(85%); /* Ajusta mais em telas pequenas */
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+        button {
+          padding: 12px 40px;
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Um lugar para organizar e gerenciar seus estudos!!!</h1>
+      <a href="pages/home.html"><button>Entrar</button></a>
+    </div>
+  </body>
+  </html>

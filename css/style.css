@@ -32,6 +32,7 @@ nav {
   justify-content: space-between;
   padding: 1rem;
   gap: 20px;
+  box-shadow: 5px 25px 5px rgba(0, 0, 0, 0.185);
 }
 
 .nav-icons {
